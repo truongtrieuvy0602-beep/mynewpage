@@ -1,9 +1,11 @@
-/* ============================================
-   THEME TOGGLE FUNCTIONALITY
-   ============================================ */
+/* ================================================
+   VY PORTFOLIO - INTERACTIVE JAVASCRIPT
+   Dark/Light Mode, Smooth Scroll, Animations
+   ================================================ */
+
+// ============== THEME TOGGLE FUNCTIONALITY ==============
 
 const themeToggle = document.getElementById('themeToggle');
-const htmlElement = document.documentElement;
 const body = document.body;
 
 // Check for saved theme preference or default to 'light-mode'
@@ -34,6 +36,18 @@ function updateThemeIcon() {
     } else {
         icon.classList.remove('fa-sun');
         icon.classList.add('fa-moon');
+    }
+}
+
+// ============== SMOOTH SCROLL FUNCTION ==============
+
+function scrollToSection(selector) {
+    const element = document.querySelector(selector);
+    if (element) {
+        element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
 }
 

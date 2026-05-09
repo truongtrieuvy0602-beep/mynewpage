@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vy Portfolio - Trương Triệu Vy</title>
+    <title>Vy Portfolio - Trương Triệu Vy | UI/UX Designer & Frontend Developer</title>
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,44 +15,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ============== HEADER / NAVBAR ============== -->
+    <!-- ============== NAVBAR / HEADER ============== -->
     <header class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="#home">Vy Portfolio</a>
+                <a href="#home">
+                    <span class="logo-icon">V</span>
+                    <span class="logo-text">y Portfolio</span>
+                </a>
             </div>
             
             <nav class="navbar-menu">
-                <a href="#home" class="navbar-link">Home</a>
+                <a href="#home" class="navbar-link active">Home</a>
                 <a href="#about" class="navbar-link">About</a>
-                <a href="#hobbies" class="navbar-link">Hobbies</a>
+                <a href="#projects" class="navbar-link">Projects</a>
+                <a href="#skills" class="navbar-link">Skills</a>
                 <a href="#contact" class="navbar-link">Contact</a>
             </nav>
             
-            <button class="theme-toggle" id="themeToggle">
-                <i class="fas fa-moon"></i>
-            </button>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- ============== HERO SECTION ============== -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+        </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">Xin chào, mình là Trương Triệu Vy</h1>
-            <p class="hero-subtitle">Sinh viên CNTT - Đồ họa kỹ thuật số</p>
-            <p class="hero-description">Yêu thích sáng tạo giao diện, thiết kế hình ảnh và trải nghiệm người dùng.</p>
+            <div class="hero-text" data-animation="fade-in">
+                <h1 class="hero-title">Trương Triệu Vy</h1>
+                <p class="hero-subtitle">Sinh viên CNTT - Đồ họa kỹ thuật số</p>
+                <p class="hero-description">
+                    Biến ý tưởng thành trải nghiệm trực quan sáng tạo. 
+                    Chuyên UI/UX Design, Frontend Development & Digital Graphics.
+                </p>
+                
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('#projects')">
+                        <span>Xem Dự Án</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('#contact')">
+                        <span>Liên Hệ</span>
+                        <i class="fas fa-envelope"></i>
+                    </button>
+                </div>
+            </div>
             
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
-                    Xem Portfolio
-                </button>
-                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-                    Liên hệ
-                </button>
+            <div class="hero-avatar" data-animation="fade-in">
+                <div class="avatar-circle">
+                    <div class="avatar-inner">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+                <div class="avatar-decoration"></div>
             </div>
         </div>
         
         <div class="hero-scroll">
+            <span>Scroll</span>
             <i class="fas fa-chevron-down"></i>
         </div>
     </section>
@@ -60,87 +93,258 @@
     <!-- ============== ABOUT SECTION ============== -->
     <section id="about" class="about">
         <div class="section-container">
-            <h2 class="section-title">Về Mình</h2>
+            <div class="section-header" data-animation="fade-in">
+                <h2 class="section-title">Về Mình</h2>
+                <p class="section-subtitle">Nhận hiểu về tôi, kỹ năng và hành trình của tôi</p>
+            </div>
             
             <div class="about-content">
-                <div class="about-avatar">
-                    <div class="avatar-placeholder">
-                        <i class="fas fa-user"></i>
+                <div class="about-card" data-animation="fade-in">
+                    <div class="about-avatar">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="about-card">
-                    <h3>Trương Triệu Vy</h3>
+                <div class="about-info" data-animation="fade-in">
+                    <h3 class="about-name">Trương Triệu Vy</h3>
                     <p class="about-role">Sinh viên CNTT - Đồ họa kỹ thuật số</p>
                     
-                    <p class="about-text">
-                        Mình là một sinh viên đam mê thiết kế và phát triển. Với niềm yêu thích sáng tạo, mình luôn tìm cách kết hợp estetik và chức năng để tạo ra những trải nghiệm tuyệt vời cho người dùng.
+                    <p class="about-description">
+                        Mình là một sinh viên năm 2 đam mê thiết kế giao diện và phát triển web. 
+                        Với sự kết hợp giữa sáng tạo và tư duy kỹ thuật, mình luôn cố gắng tạo ra 
+                        những trải nghiệm người dùng tuyệt vời.
                     </p>
                     
-                    <p class="about-text">
-                        Mình tập trung vào việc học hỏi các công nghệ mới, phát triển kỹ năng thiết kế UI/UX, và xây dựng các dự án có ý nghĩa. Luôn sẵn sàng chấp nhận thách thức mới và phát triển bản thân.
+                    <p class="about-description">
+                        Mình quan tâm đến UI/UX Design, Frontend Development, và Digital Graphics. 
+                        Luôn sẵn sàng học hỏi các công nghệ mới và chấp nhận những thách thức trong công việc.
                     </p>
                     
-                    <div class="about-skills">
-                        <span class="skill-tag">UI/UX Design</span>
-                        <span class="skill-tag">Frontend</span>
-                        <span class="skill-tag">Graphic Design</span>
-                        <span class="skill-tag">Web Design</span>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-paint-brush"></i>
+                            <div>
+                                <h4>Creative Thinking</h4>
+                                <p>Thiết kế sáng tạo & độc lập</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <h4>Clean Code</h4>
+                                <p>Code sạch & dễ bảo trì</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-user-friends"></i>
+                            <div>
+                                <h4>Team Work</h4>
+                                <p>Hợp tác tốt trong nhóm</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============== HOBBIES SECTION ============== -->
-    <section id="hobbies" class="hobbies">
+    <!-- ============== PROJECTS SECTION ============== -->
+    <section id="projects" class="projects">
         <div class="section-container">
-            <h2 class="section-title">Sở Thích</h2>
+            <div class="section-header" data-animation="fade-in">
+                <h2 class="section-title">Dự Án</h2>
+                <p class="section-subtitle">Những dự án tiêu biểu của tôi</p>
+            </div>
             
-            <div class="hobbies-grid">
-                <!-- Hobby Card 1: Nghe nhạc -->
-                <div class="hobby-card" data-animation="fade-in">
-                    <div class="hobby-icon">
-                        <i class="fas fa-music"></i>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-animation="fade-in">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-images"></i>
+                        </div>
                     </div>
-                    <h3>Nghe Nhạc</h3>
-                    <p>Thích khám phá những bản nhạc hay, tìm kiếm cảm hứng từ âm nhạc cho công việc sáng tạo.</p>
+                    <div class="project-info">
+                        <h3 class="project-title">Smile & Warm Vibes</h3>
+                        <p class="project-role">Graphic Design</p>
+                        <p class="project-description">
+                            Thiết kế poster scrapbook pastel với phong cách tươi sáng, 
+                            ấm áp. Kết hợp nhạp nhuạn các yếu tố thiên nhiên và hình dáng bo tròn.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Design</span>
+                            <span class="tag">Graphic</span>
+                        </div>
+                        <button class="project-link">Xem Dự Án <i class="fas fa-external-link-alt"></i></button>
+                    </div>
                 </div>
-                
-                <!-- Hobby Card 2: Xem phim -->
-                <div class="hobby-card" data-animation="fade-in">
-                    <div class="hobby-icon">
-                        <i class="fas fa-film"></i>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-animation="fade-in">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-laptop"></i>
+                        </div>
                     </div>
-                    <h3>Xem Phim</h3>
-                    <p>Yêu thích xem phim và series, học hỏi cách sử dụng hình ảnh, âm thanh trong storytelling.</p>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Website UI</h3>
+                        <p class="project-role">UI/UX + Frontend</p>
+                        <p class="project-description">
+                            Thiết kế giao diện portfolio hiện đại với Dark Mode, 
+                            Animations, responsive design và tương tác mượt mà.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">Frontend</span>
+                        </div>
+                        <button class="project-link">Xem Dự Án <i class="fas fa-external-link-alt"></i></button>
+                    </div>
                 </div>
-                
-                <!-- Hobby Card 3: Lướt MXH -->
-                <div class="hobby-card" data-animation="fade-in">
-                    <div class="hobby-icon">
-                        <i class="fas fa-share-alt"></i>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-animation="fade-in">
+                    <div class="project-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-gem"></i>
+                        </div>
                     </div>
-                    <h3>Lướt Mạng Xã Hội</h3>
-                    <p>Tìm kiếm xu hướng thiết kế, cập nhật thông tin công nghệ, và kết nối với cộng đồng.</p>
+                    <div class="project-info">
+                        <h3 class="project-title">FreshSip Branding</h3>
+                        <p class="project-role">Branding Design</p>
+                        <p class="project-description">
+                            Thiết kế bộ nhận diện thương hiệu cho FreshSip với logo, 
+                            bao bì, nội dung và hướng dẫn thương hiệu toàn diện.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Branding</span>
+                            <span class="tag">Design</span>
+                        </div>
+                        <button class="project-link">Xem Dự Án <i class="fas fa-external-link-alt"></i></button>
+                    </div>
                 </div>
-                
-                <!-- Hobby Card 4: Đi dạo -->
-                <div class="hobby-card" data-animation="fade-in">
-                    <div class="hobby-icon">
-                        <i class="fas fa-person-hiking"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== SKILLS SECTION ============== -->
+    <section id="skills" class="skills">
+        <div class="section-container">
+            <div class="section-header" data-animation="fade-in">
+                <h2 class="section-title">Kỹ Năng</h2>
+                <p class="section-subtitle">Các kỹ năng chính của tôi</p>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-col" data-animation="fade-in">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML/CSS</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 80%"></div>
+                        </div>
                     </div>
-                    <h3>Đi Dạo</h3>
-                    <p>Thích khám phá những nơi mới, chụp ảnh, và tìm kiếm cảm hứng từ thiên nhiên xung quanh.</p>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Photoshop</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">UI Design</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Hobby Card 5: Đi chơi -->
-                <div class="hobby-card" data-animation="fade-in">
-                    <div class="hobby-icon">
-                        <i class="fas fa-gamepad"></i>
+
+                <div class="skills-col" data-animation="fade-in">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Canva</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 90%"></div>
+                        </div>
                     </div>
-                    <h3>Đi Chơi</h3>
-                    <p>Thích chơi game, khám phá những trò chơi mới, học hỏi về game design và user experience.</p>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies Section -->
+            <div class="hobbies-section" data-animation="fade-in">
+                <h3 class="hobbies-title">Sở Thích Của Mình</h3>
+                <div class="hobbies-grid">
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-music"></i>
+                        </div>
+                        <h4>Nghe Nhạc</h4>
+                        <p>Tìm cảm hứng từ âm nhạc</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4>Xem Phim</h4>
+                        <p>Học hỏi từ cinematography</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h4>Lướt MXH</h4>
+                        <p>Cập nhật công nghệ & xu hướng</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-person-hiking"></i>
+                        </div>
+                        <h4>Đi Dạo</h4>
+                        <p>Khám phá & chụp ảnh</p>
+                    </div>
+
+                    <div class="hobby-card">
+                        <div class="hobby-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h4>Đi Chơi</h4>
+                        <p>Học game design & UX</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -149,37 +353,75 @@
     <!-- ============== CONTACT SECTION ============== -->
     <section id="contact" class="contact">
         <div class="section-container">
-            <h2 class="section-title">Liên Hệ</h2>
+            <div class="section-header" data-animation="fade-in">
+                <h2 class="section-title">Liên Hệ</h2>
+                <p class="section-subtitle">Hãy kết nối với tôi</p>
+            </div>
             
-            <p class="contact-intro">Hãy kết nối với mình qua các kênh dưới đây!</p>
-            
-            <div class="social-links">
-                <a href="mailto:your.email@example.com" class="social-link" title="Email">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                </a>
-                
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                    <span>Facebook</span>
-                </a>
-                
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                </a>
-                
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
+            <div class="contact-content" data-animation="fade-in">
+                <p class="contact-intro">
+                    Hãy cùng nhau tạo nên những sản phẩm sáng tạo. 
+                    Tôi luôn sẵn sàng lắng nghe các ý tưởng của bạn!
+                </p>
+
+                <div class="contact-methods">
+                    <a href="mailto:truongtrieuvy0602@gmail.com" class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>truongtrieuvy0602@gmail.com</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+84123456789" class="contact-method">
+                        <div class="method-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4>Điện Thoại</h4>
+                            <p>+84 (123) 456-789</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-section">
+                    <h4>Theo Dõi Tôi</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" onclick="document.location.href='mailto:truongtrieuvy0602@gmail.com'">
+                    <span>Liên Hệ Ngay</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </section>
 
     <!-- ============== FOOTER ============== -->
     <footer class="footer">
-        <p>&copy; 2026 Trương Triệu Vy. All rights reserved.</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Trương Triệu Vy. All rights reserved.</p>
+            <p class="footer-credit">Designed & Built with <i class="fas fa-heart"></i> by Vy</p>
+        </div>
     </footer>
 
     <!-- JavaScript -->
