@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vy Portfolio - Trương Triệu Vy</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============== HEADER / NAVBAR ============== -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#home">Vy Portfolio</a>
+            </div>
+            
+            <nav class="navbar-menu">
+                <a href="#home" class="navbar-link">Home</a>
+                <a href="#about" class="navbar-link">About</a>
+                <a href="#hobbies" class="navbar-link">Hobbies</a>
+                <a href="#contact" class="navbar-link">Contact</a>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ============== HERO SECTION ============== -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Xin chào, mình là Trương Triệu Vy</h1>
+            <p class="hero-subtitle">Sinh viên CNTT - Đồ họa kỹ thuật số</p>
+            <p class="hero-description">Yêu thích sáng tạo giao diện, thiết kế hình ảnh và trải nghiệm người dùng.</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
+                    Xem Portfolio
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    Liên hệ
+                </button>
+            </div>
+        </div>
+        
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ============== ABOUT SECTION ============== -->
+    <section id="about" class="about">
+        <div class="section-container">
+            <h2 class="section-title">Về Mình</h2>
+            
+            <div class="about-content">
+                <div class="about-avatar">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+                
+                <div class="about-card">
+                    <h3>Trương Triệu Vy</h3>
+                    <p class="about-role">Sinh viên CNTT - Đồ họa kỹ thuật số</p>
+                    
+                    <p class="about-text">
+                        Mình là một sinh viên đam mê thiết kế và phát triển. Với niềm yêu thích sáng tạo, mình luôn tìm cách kết hợp estetik và chức năng để tạo ra những trải nghiệm tuyệt vời cho người dùng.
+                    </p>
+                    
+                    <p class="about-text">
+                        Mình tập trung vào việc học hỏi các công nghệ mới, phát triển kỹ năng thiết kế UI/UX, và xây dựng các dự án có ý nghĩa. Luôn sẵn sàng chấp nhận thách thức mới và phát triển bản thân.
+                    </p>
+                    
+                    <div class="about-skills">
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">Frontend</span>
+                        <span class="skill-tag">Graphic Design</span>
+                        <span class="skill-tag">Web Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== HOBBIES SECTION ============== -->
+    <section id="hobbies" class="hobbies">
+        <div class="section-container">
+            <h2 class="section-title">Sở Thích</h2>
+            
+            <div class="hobbies-grid">
+                <!-- Hobby Card 1: Nghe nhạc -->
+                <div class="hobby-card" data-animation="fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Nghe Nhạc</h3>
+                    <p>Thích khám phá những bản nhạc hay, tìm kiếm cảm hứng từ âm nhạc cho công việc sáng tạo.</p>
+                </div>
+                
+                <!-- Hobby Card 2: Xem phim -->
+                <div class="hobby-card" data-animation="fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Xem Phim</h3>
+                    <p>Yêu thích xem phim và series, học hỏi cách sử dụng hình ảnh, âm thanh trong storytelling.</p>
+                </div>
+                
+                <!-- Hobby Card 3: Lướt MXH -->
+                <div class="hobby-card" data-animation="fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>Lướt Mạng Xã Hội</h3>
+                    <p>Tìm kiếm xu hướng thiết kế, cập nhật thông tin công nghệ, và kết nối với cộng đồng.</p>
+                </div>
+                
+                <!-- Hobby Card 4: Đi dạo -->
+                <div class="hobby-card" data-animation="fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-person-hiking"></i>
+                    </div>
+                    <h3>Đi Dạo</h3>
+                    <p>Thích khám phá những nơi mới, chụp ảnh, và tìm kiếm cảm hứng từ thiên nhiên xung quanh.</p>
+                </div>
+                
+                <!-- Hobby Card 5: Đi chơi -->
+                <div class="hobby-card" data-animation="fade-in">
+                    <div class="hobby-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Đi Chơi</h3>
+                    <p>Thích chơi game, khám phá những trò chơi mới, học hỏi về game design và user experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== CONTACT SECTION ============== -->
+    <section id="contact" class="contact">
+        <div class="section-container">
+            <h2 class="section-title">Liên Hệ</h2>
+            
+            <p class="contact-intro">Hãy kết nối với mình qua các kênh dưới đây!</p>
+            
+            <div class="social-links">
+                <a href="mailto:your.email@example.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </a>
+                
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============== FOOTER ============== -->
+    <footer class="footer">
+        <p>&copy; 2026 Trương Triệu Vy. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
